@@ -35,7 +35,6 @@ func InitConfig(configname string) {
         if cIndex == -1 {
             panic(fmt.Errorf("config file not specified"))
         }
-        fmt.Println(cIndex)
         viper.SetConfigName(configname[:cIndex])
         viper.AddConfigPath(".")
         err := viper.ReadInConfig()
